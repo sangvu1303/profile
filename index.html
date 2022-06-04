@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+
+  <body>
+
+    <div class="card">
+
+          <div class="card__img">
+              <img src="img.jpg" alt="" />
+          </div>
+
+          <h2>Sáng Vũ</h2>
+          <p>Developer</p>
+          <p>Study at PTIT</p>
+
+          <div class="card__social">
+
+              <a target="_black" href="https://www.facebook.com/vusang1332000/">
+              <i class="fab fa-facebook-f"></i>
+              </a>
+
+              <a target="_black" href="https://www.instagram.com/18.gnas/">
+              <i class="fab fa-instagram"></i>
+              </a>
+
+              <a target="_black" href="https://www.youtube.com/channel/UCdn35s9mGF0ihX35xdlaHQg">
+              <i class="fab fa-youtube"></i>
+              </a>
+
+              <a target="_black" href="https://www.tiktok.com/@_vs1303_">
+              <i class="fab fa-tiktok"></i>
+              </a>
+
+              <a target="_black" href="https://github.com/sangvu1303">
+              <i class="fab fa-github"></i>
+              </a>
+
+          </div>
+
+
+          <button class="open-modal-btn">Contact</button>
+            <div class="modal hide">
+
+                <div class="modal__inner">
+
+                    <div class="modal__header">
+                      <p>My Contact</p>
+                      <i class="fas fa-times"></i>
+                    </div>
+      
+                    <div class="modal__body">
+                      <p>Vinaphone : 0855187084</p>
+                      <p>Mobiphone : 0779258189</p>
+                      <p>Agribank : 1500206086056</p>
+                      <p>Techcombank : 19037360870016</p>
+                      <p>MBBank : 0760104252006</p>
+                      <p>Cake-VPBank : 0779258189</p>
+                      <p>TPBank : 08551870840</p>
+                      <p>Momo : 0855187084</p>
+                    </div>
+      
+                    <div class="modal__footer">
+                      <button>Close</button>
+                    </div>
+                </div>
+            </div>
+      </div>
+
+
+    <script>
+        const modal = document.querySelector('.modal')
+        const openModalBtn = document.querySelector('.open-modal-btn')
+        const iconCloseModal = document.querySelector('.modal__header i')
+        const buttonCloseModal = document.querySelector('.modal__footer button')
+  
+        function toggleModal() {
+          modal.classList.toggle('hide')
+        }
+  
+          openModalBtn.addEventListener('click', toggleModal)
+          iconCloseModal.addEventListener('click', toggleModal)
+          buttonCloseModal.addEventListener('click', toggleModal)
+  
+          modal.addEventListener('click', (e) => {
+            if (e.target == e.currentTarget) toggleModal()
+            }
+          )
+  
+    </script> 
+   
+  </body>
+</html>
