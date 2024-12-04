@@ -5,101 +5,88 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Profile Card</title>
+  <title>Enhanced Profile Card</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
     integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer" />
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <div class="container">
+    <div class="card">
+      <!-- Profile Image -->
+      <div class="card__img">
+        <img src="img.jpg" alt="Profile Image" />
+      </div>
 
-  <div class="card">
+      <!-- Profile Information -->
+      <div class="card__info">
+        <h2>Sáng Vũ</h2>
+        <p>Developer</p>
+        <p>Study at PTIT</p>
+      </div>
 
-    <div class="card__img">
-      <img src="img.jpg" alt="Profile Image" />
+      <!-- Social Links -->
+      <div class="card__social">
+        <a target="_blank" href="https://www.facebook.com/vusang1332000/"><i class="fab fa-facebook-f"></i></a>
+        <a target="_blank" href="https://www.instagram.com/gnas.13march/"><i class="fab fa-instagram"></i></a>
+        <a target="_blank" href="https://www.youtube.com/channel/UCdn35s9mGF0ihX35xdlaHQg"><i class="fab fa-youtube"></i></a>
+        <a target="_blank" href="https://www.tiktok.com/@_vs1303_"><i class="fab fa-tiktok"></i></a>
+        <a target="_blank" href="https://github.com/sangvu1303"><i class="fab fa-github"></i></a>
+      </div>
+
+      <!-- CV Button -->
+      <div class="card__actions">
+        <a class="btn btn-primary" target="_blank" href="https://sangvu1303.github.io/CV/">Digital CV</a>
+        <button class="btn btn-secondary open-modal-btn">Contact</button>
+      </div>
     </div>
 
-    <h2>Sáng Vũ</h2>
-    <p>Developer</p>
-    <p>Study at PTIT</p>
-
-    <div class="card__social">
-
-      <a target="_blank" href="https://www.facebook.com/vusang1332000/">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-
-      <a target="_blank" href="https://www.instagram.com/gnas.13march/">
-        <i class="fab fa-instagram"></i>
-      </a>
-
-      <a target="_blank" href="https://www.youtube.com/channel/UCdn35s9mGF0ihX35xdlaHQg">
-        <i class="fab fa-youtube"></i>
-      </a>
-
-      <a target="_blank" href="https://www.tiktok.com/@_vs1303_">
-        <i class="fab fa-tiktok"></i>
-      </a>
-
-      <a target="_blank" href="https://github.com/sangvu1303">
-        <i class="fab fa-github"></i>
-      </a>
-
-    </div>
-
-    <div class="cv">
-      <a class="cv-btn" target="_blank" href="https://sangvu1303.github.io/CV/">
-        Digital CV
-      </a>
-    </div>
-
-    <button class="open-modal-btn">Contact</button>
-
+    <!-- Modal -->
     <div class="modal hide">
       <div class="modal__inner">
-
         <div class="modal__header">
-          <p>My Contact</p>
+          <p>Contact Information</p>
           <i class="fas fa-times"></i>
         </div>
-
         <div class="modal__body">
-          <p> sđt1 : 092 133 2000 </p>
-          <p> sđt2 : 055 942 1303 </p>
-          <p> Cake-VPBank : 0921332000</p>
-          <p> MBBank : SANGVU133 </p>
-          <p> Momo : 0921332000</p>
-          <p> ViettelMoney : 0921332000 </p>
+          <ul>
+            <li><strong>Phone 1:</strong> 092 133 2000</li>
+            <li><strong>Phone 2:</strong> 055 942 1303</li>
+            <li><strong>Cake - VPBank:</strong> 0921332000</li>
+            <li><strong>MBBank:</strong> SANGVU133</li>
+            <li><strong>Momo:</strong> 0921332000</li>
+            <li><strong>ViettelMoney:</strong> 0921332000</li>
+          </ul>
         </div>
-
         <div class="modal__footer">
-          <button>Close</button>
+          <button class="btn btn-secondary close-modal-btn">Close</button>
         </div>
       </div>
     </div>
   </div>
 
   <script>
-    const modal = document.querySelector('.modal');
-    const openModalBtn = document.querySelector('.open-modal-btn');
-    const iconCloseModal = document.querySelector('.modal__header i');
-    const buttonCloseModal = document.querySelector('.modal__footer button');
+    document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.querySelector(".modal");
+  const openModalBtn = document.querySelector(".open-modal-btn");
+  const closeModalBtn = document.querySelector(".close-modal-btn");
+  const modalCloseIcon = document.querySelector(".modal__header i");
 
-    function toggleModal() {
-      modal.classList.toggle('hide');
-    }
+  function toggleModal() {
+    modal.classList.toggle("hide");
+  }
 
-    openModalBtn.addEventListener('click', toggleModal);
-    iconCloseModal.addEventListener('click', toggleModal);
-    buttonCloseModal.addEventListener('click', toggleModal);
+  openModalBtn.addEventListener("click", toggleModal);
+  closeModalBtn.addEventListener("click", toggleModal);
+  modalCloseIcon.addEventListener("click", toggleModal);
 
-    modal.addEventListener('click', (e) => {
-      if (e.target === e.currentTarget) toggleModal();
-    });
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) toggleModal();
+  });
+});
   </script>
-
 </body>
 
 </html>
