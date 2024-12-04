@@ -1,106 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profile Card</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Card</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+</head>
 
+<body>
 
-  <body>
+  <div class="card">
 
-    <div class="card">
+    <div class="card__img">
+      <img src="img.jpg" alt="Profile Image" />
+    </div>
 
-          <div class="card__img">
-              <img src="img.jpg" alt="" />
-          </div>
+    <h2>Sáng Vũ</h2>
+    <p>Developer</p>
+    <p>Study at PTIT</p>
 
-          <h2>Sáng Vũ</h2>
-          <p>Developer</p>
-          <p>Study at PTIT</p>
+    <div class="card__social">
 
-          <div class="card__social">
+      <a target="_blank" href="https://www.facebook.com/vusang1332000/">
+        <i class="fab fa-facebook-f"></i>
+      </a>
 
-              <a target="_black" href="https://www.facebook.com/vusang1332000/">
-              <i class="fab fa-facebook-f"></i>
-              </a>
+      <a target="_blank" href="https://www.instagram.com/gnas.13march/">
+        <i class="fab fa-instagram"></i>
+      </a>
 
-              <a target="_black" href="https://www.instagram.com/gnas.13march/">
-              <i class="fab fa-instagram"></i>
-              </a>
+      <a target="_blank" href="https://www.youtube.com/channel/UCdn35s9mGF0ihX35xdlaHQg">
+        <i class="fab fa-youtube"></i>
+      </a>
 
-              <a target="_black" href="https://www.youtube.com/channel/UCdn35s9mGF0ihX35xdlaHQg">
-              <i class="fab fa-youtube"></i>
-              </a>
+      <a target="_blank" href="https://www.tiktok.com/@_vs1303_">
+        <i class="fab fa-tiktok"></i>
+      </a>
 
-              <a target="_black" href="https://www.tiktok.com/@_vs1303_">
-              <i class="fab fa-tiktok"></i>
-              </a>
+      <a target="_blank" href="https://github.com/sangvu1303">
+        <i class="fab fa-github"></i>
+      </a>
 
-              <a target="_black" href="https://github.com/sangvu1303">
-              <i class="fab fa-github"></i>
-              </a>
+    </div>
 
-          </div>
-      <div class="cv">
-<button class="cv-btn"><a target="_black" href="https://sangvu1303.github.io/CV/">
-  Digital CV 
-</button> </div>
+    <div class="cv">
+      <a class="cv-btn" target="_blank" href="https://sangvu1303.github.io/CV/">
+        Digital CV
+      </a>
+    </div>
 
-          <button class="open-modal-btn">Contact</button>
-            <div class="modal hide">
+    <button class="open-modal-btn">Contact</button>
 
-                <div class="modal__inner">
+    <div class="modal hide">
+      <div class="modal__inner">
 
-                    <div class="modal__header">
-                      <p>My Contact</p>
-                      <i class="fas fa-times"></i>
-                    </div>
-      
-                    <div class="modal__body">
-                      <p> sđt1 : 092 133 2000 </p>
-                      <p> sđt2 : 055 942 1303 </p>
-                      <p> Cake-VPBank : 0921332000</p>
-                      <p> MBBank : SANGVU133 </p>
-                      <p> Momo : 0921332000</p>
-                      <p> ViettelMoney : 0921332000 </p>
-                    </div>
-      
-                    <div class="modal__footer">
-                      <button>Close</button>
-                    </div>
-                </div>
-            </div>
+        <div class="modal__header">
+          <p>My Contact</p>
+          <i class="fas fa-times"></i>
+        </div>
+
+        <div class="modal__body">
+          <p> sđt1 : 092 133 2000 </p>
+          <p> sđt2 : 055 942 1303 </p>
+          <p> Cake-VPBank : 0921332000</p>
+          <p> MBBank : SANGVU133 </p>
+          <p> Momo : 0921332000</p>
+          <p> ViettelMoney : 0921332000 </p>
+        </div>
+
+        <div class="modal__footer">
+          <button>Close</button>
+        </div>
       </div>
+    </div>
+  </div>
 
+  <script>
+    const modal = document.querySelector('.modal');
+    const openModalBtn = document.querySelector('.open-modal-btn');
+    const iconCloseModal = document.querySelector('.modal__header i');
+    const buttonCloseModal = document.querySelector('.modal__footer button');
 
-    <script>
-        const modal = document.querySelector('.modal')
-        const openModalBtn = document.querySelector('.open-modal-btn')
-        const iconCloseModal = document.querySelector('.modal__header i')
-        const buttonCloseModal = document.querySelector('.modal__footer button')
-  
-        function toggleModal() {
-          modal.classList.toggle('hide')
-        }
-  
-          openModalBtn.addEventListener('click', toggleModal)
-          iconCloseModal.addEventListener('click', toggleModal)
-          buttonCloseModal.addEventListener('click', toggleModal)
-  
-          modal.addEventListener('click', (e) => {
-            if (e.target == e.currentTarget) toggleModal()
-            }
-          )
-  
-    </script> 
-   
-  </body>
+    function toggleModal() {
+      modal.classList.toggle('hide');
+    }
+
+    openModalBtn.addEventListener('click', toggleModal);
+    iconCloseModal.addEventListener('click', toggleModal);
+    buttonCloseModal.addEventListener('click', toggleModal);
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === e.currentTarget) toggleModal();
+    });
+  </script>
+
+</body>
+
 </html>
